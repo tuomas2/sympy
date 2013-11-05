@@ -46,10 +46,10 @@ def test_pow_is_real():
     assert im((x**y)).expand(complex=True) is S.Zero
 
 def test_pow_is_real_or_imaginary():
-    x = Symbol("x",imaginary=True)
-    y = Symbol("y",odd=True)
+    x = Symbol("x", imaginary=True)
+    y = Symbol("y", odd=True)
     assert (x**y).is_imaginary
-    y = Symbol("y",even=True)
+    y = Symbol("y", even=True)
     assert (x**y).is_real
 
 def test_issue350():
